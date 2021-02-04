@@ -25,7 +25,7 @@ jobs:
           - php-version: '8.0'
             laravel-version: '5.8.*'
 
-    name: Tests on PHP ${{ matrix.php-version }}
+    name: Tests on PHP ${{ matrix.php-version }} with Laravel ${{ matrix.laravel-version }}
 
     steps:
       - name: Checkout
@@ -50,7 +50,7 @@ jobs:
 
       - name: Install dependencies
         if: steps.composer-cache.outputs.cache-hit != 'true'
-        run: composer install --prefer-dist --no-progress --no-suggest
+        run: composer update --with "illuminate/contracts=${{ matrix.laravel-version }}" --prefer-dist --no-progress --no-suggest
 
       - name: Install laravel/legacy-factories only for Laravel 8.0
         if: matrix.laravel-version == '^8.0'
