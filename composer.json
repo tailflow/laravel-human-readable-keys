@@ -1,0 +1,56 @@
+{
+  "name": "tailflow/laravel-human-readable-keys",
+  "keywords": [
+    "tailflow",
+    "laravel stripe id",
+    "laravel human id",
+    "laravel string id"
+  ],
+  "homepage": "https://github.com/tailflow/laravel-human-readable-keys",
+  "description": "Generate Stripe-like IDs for Eloquent models",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Aleksei Zarubin",
+      "email": "alex@tailflow.org"
+    }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "illuminate/contracts": ">=5.7",
+    "illuminate/database": ">=5.7",
+    "illuminate/support": ">=5.7"
+  },
+  "require-dev": {
+    "mockery/mockery": "^1.0",
+    "phpunit/phpunit": "^6.0|^7.0|^8.0|^9.0",
+    "orchestra/testbench": "^3.7|^4.0|^5.0|^6.0"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Tailflow\\HumanReadableKeys\\HumanReadableKeysServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "Tailflow\\HumanReadableKeys\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tailflow\\HumanReadableKeys\\Tests\\": "tests",
+      "Tailflow\\HumanReadableKeys\\Tests\\Fixtures\\App\\": "tests/fixtures/app/",
+      "Tailflow\\HumanReadableKeys\\Tests\\Fixtures\\Database\\Factories\\": "tests/fixtures/database/factories"
+    }
+  },
+  "support": {
+    "issues": "https://github.com/tailflow/laravel-human-readable-keys/issues",
+    "source": "https://github.com/tailflow/laravel-human-readable-keys"
+  }
+}
