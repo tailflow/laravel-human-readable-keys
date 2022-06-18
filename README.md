@@ -1,7 +1,7 @@
 # Laravel Human Readable Keys
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/tailflow/laravel-human-readable-keys.svg)](https://packagist.org/packages/tailflow/laravel-human-readable-keys)
-[![Build Status on Travis CI](https://img.shields.io/github/workflow/status/tailflow/laravel-human-readable-keys/default)](https://github.com/tailflow/laravel-human-readable-keys/actions)
+[![Build Status on Github Action](https://img.shields.io/github/workflow/status/tailflow/laravel-human-readable-keys/default)](https://github.com/tailflow/laravel-human-readable-keys/actions)
 
 Have you ever wanted to generate Stripe-like IDs for your Eloquent models? This package does exactly that!
 
@@ -19,7 +19,7 @@ composer require tailflow/laravel-human-readable-keys
 
 ```php
 Schema::create('users', function (Blueprint $table) {
-    $table->string()('id');
+    $table->string('id');
     
     ...
 });
